@@ -1,17 +1,21 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const session  =require('express-session');
 const app = express();
 dotenv.config({ path: "./config.env" });
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
+app.use(session({
+  secret:SE
+}))
 
 
-// Setup view engine
-app.set('view engine','ejs');
-app.set('views','views')
+//Setup view Engine
+app.set('view engine', 'ejs')
+app.set('views', 'views')
 
 // Imnport Router
 const userRoute = require('./routers/UserRoutes')
