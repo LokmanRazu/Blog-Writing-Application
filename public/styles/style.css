@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.my-container{
+    min-height: 505px;
+    
+}
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: rgb(245,245,245);
+}
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+
+}

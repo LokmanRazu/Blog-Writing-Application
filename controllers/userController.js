@@ -1,10 +1,10 @@
 const User = require("../models/userModel");
 
-exports.getUserController = async (req, res, next) => {
-  try {
-    const user = await User.find();
-  } catch (e) {
-    console.log(`I am from get user controller ${e}`);
-    next();
-  }
+exports.signupGetController = (req, res, next) => {
+  res.render('pages/auth/signup',{title:'Create a account'})
 };
+
+exports.signuppostController = (req,res,next)=>{
+  console.log(req.body)
+  res.render('pages/auth/signup',{title:'Create a account'})
+}

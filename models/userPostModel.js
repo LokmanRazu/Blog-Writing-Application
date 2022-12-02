@@ -1,4 +1,4 @@
-const { model, Schema, trusted } = require("mongoose");
+const { model, Schema} = require("mongoose");
 const User = require("./userModel");
 
 const postSchema = new Schema(
@@ -32,7 +32,7 @@ const postSchema = new Schema(
     ],
     dislikes: [
       {
-        type: Schema.Types.object,
+        type: Schema.Types.ObjectId,
         ref: "User",
       },
     ],
